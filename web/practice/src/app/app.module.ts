@@ -47,7 +47,8 @@ import { HomeComponent } from './home/home.component';
 import { JoinComponent } from './join/join.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'join', component: JoinComponent },
   { path: 'login', component: LoginComponent },
 ];
