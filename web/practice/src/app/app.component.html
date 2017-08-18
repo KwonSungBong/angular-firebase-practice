@@ -3,28 +3,28 @@
 </md-toolbar>
 <nav md-tab-nav-bar>
   <a md-tab-link
-     [routerLink]="['/']"
+     [routerLink]="['/home']"
      routerLinkActive="active-link" #rlaHome="routerLinkActive"
-     [active]="[rlaHome.isActive == true ? 'active' : '']">
-    home
+     [active]="[rlaHome.isActive ? 'active' : '']">
+    home{{rlaHome.isActive}}
   </a>
   <a md-tab-link
      [routerLink]="['/join']"
      routerLinkActive="active-link" #rlaJoin="routerLinkActive"
-     [active]="[rlaJoin.isActive == true ? 'active' : '']">
-    join
+     [active]="[rlaJoin.isActive ? 'active' : '']">
+    join{{rlaJoin.isActive}}
   </a>
   <a md-tab-link
      [routerLink]="['/login']"
      routerLinkActive="active-link" #rlaLogin="routerLinkActive"
-     [active]="[rlaLogin.isActive == true ? 'active' : '']">
-    login
+     [active]="[rlaLogin.isActive ? 'active' : '']">
+    login{{rlaLogin.isActive}}
   </a>
   <a md-tab-link
      [routerLink]="['/board']"
      routerLinkActive="active-link" #rlaBoard="routerLinkActive"
-     [active]="[rlaBoard.isActive == true ? 'active' : '']">
-    board
+     [active]="[rlaBoard.isActive ? 'active' : '']">
+    board{{rlaBoard.isActive}}
   </a>
 </nav>
 <router-outlet></router-outlet>
