@@ -20,6 +20,12 @@
      [active]="[rlaLogin.isActive == true ? 'active' : '']">
     login
   </a>
+  <a md-tab-link
+     [routerLink]="['/board']"
+     routerLinkActive="active-link" #rlaBoard="routerLinkActive"
+     [active]="[rlaBoard.isActive == true ? 'active' : '']">
+    board
+  </a>
 </nav>
 <router-outlet></router-outlet>
 

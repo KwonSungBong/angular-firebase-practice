@@ -51,6 +51,10 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'join', component: JoinComponent },
   { path: 'login', component: LoginComponent },
+  {
+    path: 'board',
+    loadChildren: './board/board.module#BoardModule'
+  },
 ];
 
 @NgModule({
