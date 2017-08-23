@@ -46,6 +46,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { JoinComponent } from './join/join.component';
 import { TalkComponent } from './talk/talk.component';
+import { MessagingComponent } from './messaging/messaging.component';
 
 const appRoutes: Routes = [
   //{ path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -57,6 +58,7 @@ const appRoutes: Routes = [
     loadChildren: './board/board.module#BoardModule'
   },
   { path: 'talk', component: TalkComponent },
+  { path: 'messaging', component: MessagingComponent },
 ];
 
 @NgModule({
@@ -65,7 +67,8 @@ const appRoutes: Routes = [
     LoginComponent,
     HomeComponent,
     JoinComponent,
-    TalkComponent
+    TalkComponent,
+    MessagingComponent
   ],
   imports: [
     BrowserModule,
