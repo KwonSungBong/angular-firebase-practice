@@ -1,0 +1,12 @@
+<p>
+  talk works!
+</p>
+<button (click)="insert()">insert</button>
+<p>
+  {{ (item | async)?.name }}
+</p>
+<ul>
+  <li *ngFor="let item of items | async">
+    {{ item | json }}
+  </li>
+</ul>

@@ -26,6 +26,12 @@
      [active]="[rlaBoard.isActive ? 'active' : '']">
     board{{rlaBoard.isActive}}
   </a>
+  <a md-tab-link
+     [routerLink]="['/talk']"
+     routerLinkActive="active-link" #rlaTalk="routerLinkActive"
+     [active]="[rlaTalk.isActive ? 'active' : '']">
+    talk{{rlaTalk.isActive}}
+  </a>
 </nav>
 <router-outlet></router-outlet>
 
