@@ -1,6 +1,6 @@
 import {Message} from './message.model';
 
-export class Talk {
+export class Room {
 
   id: string;
   messages: [];
