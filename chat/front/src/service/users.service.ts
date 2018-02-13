@@ -12,4 +12,8 @@ export class UsersService {
     this.currentUser.next(newUser);
   }
 
+  public getCurrentUser(callback): void {
+    this.currentUser.subscribe(callback);
+  }
+
 }

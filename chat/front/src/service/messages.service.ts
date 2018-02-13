@@ -10,10 +10,10 @@ export class MessagesService {
 
   constructor() {
     const initialMessages = [];
-    this.messages = this.updates.scan((messages: Message[],
-                                       operation: IMessagesOperation) => {
-      return operation(messages);
-    }, initialMessages);
+    //this.messages = this.updates.scan((messages: Message[],
+    //                                   operation: IMessagesOperation) => {
+    //  return operation(messages);
+    //}, initialMessages);
   }
 
   addMessage(newMessage: Message) {
@@ -21,8 +21,6 @@ export class MessagesService {
       return messages.concat(newMessage);
     });
   }
-
-
 
 }
 

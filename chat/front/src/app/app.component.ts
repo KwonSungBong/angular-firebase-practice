@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
+import {UsersService} from '../service/users.service';
+import {User} from '../model/user.model';
 
 @Component({
   selector: 'app-root',
@@ -9,31 +11,27 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class AppComponent {
   title = 'app';
+  clickMessage: string;
+  result = 'result';
+  usersService: UsersService;
 
-  private data: Observable<Array<number>>;
+  constructor(usersService: UsersService) {
+    this.usersService = usersService;
+    usersService.getCurrentUser(value => console.log(value))
+  }
 
-  ngOnInit() {
+  onClickMe() {
+    console.log(this.clickMessage);
+    this.result = this.clickMessage;
+  }
 
-    this.data = new Observable(observer => {
-      setTimeout(() => {
-        observer.next(42);
-      }, 1000);
+  newUser() {
+    let user: User = new User("testId", "testUserName");
+    this.usersService.setCurrentUser(user);
+  }
 
-      setTimeout(() => {
-        observer.next(43);
-      }, 2000);
-
-      setTimeout(() => {
-        observer.complete();
-      }, 3000);
-    });
-
-    let subscription = this.data.subscribe(
-      value => console.log("value", value),
-      error => console.log("error", error),
-      () => console.log("finished")
-    );
-
+  destoryUser() {
+    this.usersService.setCurrentUser(null);
   }
 
 }

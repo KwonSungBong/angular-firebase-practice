@@ -4,4 +4,8 @@
     Welcome to {{title}}!
   </h1>
 </div>
-<h2>TEST TEST TEST</h2>
+<h2>{{result}}</h2>
+<input id="clickMessage" name="clickMessage" type="text" [(ngModel)]="clickMessage" />
+<button (click)="onClickMe()">Click me!</button>
+<button (click)="newUser()">newUser!</button>
+<button (click)="destoryUser()">destoryUser!</button>
