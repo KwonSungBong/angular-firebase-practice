@@ -34,4 +34,8 @@ export class AppComponent {
     this.usersService.setCurrentUser(null);
   }
 
+  test() {
+
+  }
+
 }
