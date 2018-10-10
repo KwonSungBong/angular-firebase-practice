@@ -1,0 +1,10 @@
+{
+  "type": "mysql",
+  "host": "www.bookstorage.kr",
+  "port": 3308,
+  "username": "root",
+  "password": "password",
+  "database": "security",
+  "entities": ["src/**/**.entity{.ts,.js}"],
+  "synchronize": true
+}
